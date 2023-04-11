@@ -1,3 +1,20 @@
+:root {
+  /* Used for texts (+ footer background) */
+  --color-granite: #252629;
+  /* Used for backgrounds (+ footer text color) */
+  --color-foam: #ffffff;
+  /* Used for buttons, icons, etc. */
+  --color-nemo: #ff4a11;
+  /* active color for buttons, icons, etc. */
+  --color-nemo-mid: #ff5c29;
+  /* hover color for buttons, icons, etc. */
+  --color-nemo-dark: #e5430f;
+  /* Used for borders and some backgrounds */
+  --color-water-10: #e4e8f0;
+}
+* {
+  color: #252629;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +52,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  text-align: center;
+  background-color: lightgrey;
+  width: 30vw;
+  margin: 0 auto 0 auto;
+  padding: 10px 0 10px 0;
+}
+
+.entryP {
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 0 auto 0 auto;
+}
+
+.label {
+  padding: 10px 0 10px 0;
+}
+
+.input {
+  padding: 10px;
+}
+
+.createBotton {
+  color: white;
+  background-color: #ff4a11;
+  border-radius: 10%;
+  border: none;
+  width: 10vw;
+  height: 4vw;
+  margin: 20px auto 0 auto;
+}
+
+.createBotton:hover {
+  background-color: #e5430f;
 }

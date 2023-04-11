@@ -1,8 +1,12 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import TabBar from "./componenets/TabBar/TabBar";
+import Form from "./componenets/Form";
+import { useState } from "react";
 
 function App() {
+  const [motto, setMotto] = useState("");
+  const [notes, setNotes] = useState("");
   return (
     <>
       <header className="header">
@@ -10,37 +14,27 @@ function App() {
       </header>
 
       <main>
-        <form className="form">
-          <p className="entryP">NEW ENTRY</p>
-          <label for="mottoInput" className="label">
-            Motto
-          </label>
-          <textarea
-            type="text"
-            name="mottoInput"
-            className="input"
-            cols="30"
-            rows="3"
-          />
-
-          <label for="notesInput" className="label">
-            Notes
-          </label>
-          <textarea
-            type="text"
-            name="notesInput"
-            className="input"
-            cols="30"
-            rows="10"
-          />
-          <button className="createBotton">Create</button>
-        </form>
+        <Form
+          notes={notes}
+          motto={motto}
+          setNotes={setNotes}
+          setMotto={setMotto}
+        />
         <section>
           <div className="tabBar">
             <TabBar />
           </div>
           <div className="entryList"></div>
         </section>
+
+        <dl className="container">
+          <dt>
+            Name: <span className="output">{motto}</span>
+          </dt>
+          <dd>
+            Email: <span className="output">{notes}</span>
+          </dd>
+        </dl>
       </main>
 
       <footer></footer>
